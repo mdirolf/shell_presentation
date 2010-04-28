@@ -1,3 +1,20 @@
+/*
+ * Slides for presentation on CRUD and the JavaScript shell.
+ *
+ * Copyright 2010 Mike Dirolf (http://dirolf.com)
+ *
+ * This work is licensed under the Creative Commons
+ * Attribution-Noncommercial-Share Alike 3.0 United States License. To view a
+ * copy of this license, visit
+ * http://creativecommons.org/licenses/by-nc-sa/3.0/us/ or send a letter to
+ * Creative Commons, 171 Second Street, Suite 300,
+ * San Francisco, California, 94105, USA.
+ *
+ * Originally given at MongoSF on 4/30/2010.
+ *
+ * To use: run `mongo --shell slides.js`
+ */
+
 // set db and clean up
 db = db.getSisterDB("crud");
 db.dropDatabase();
@@ -16,6 +33,7 @@ db.dropDatabase();
  * Scripting
  */
 
+// "slides"
 db.deck.save({slide: 0,
               title: "CRUD and the JavaScript Shell",
               who: "Mike Dirolf, 10gen",
