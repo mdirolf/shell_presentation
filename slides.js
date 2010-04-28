@@ -19,19 +19,10 @@
 db = db.getSisterDB("crud");
 db.dropDatabase();
 
-/*
- * What is the shell?
- *  * Full JS shell
- *  * MongoDB client
- * Uses
- *  * Admin scripting
- *  * Exploring/debugging
- *  * Learning
- * Help
- * Navigation
- * Quirks
- * Scripting
- */
+// some sample data
+for (var i = 0; i < 1000; i += 1) {
+    db.data.save({x: i});
+}
 
 // "slides"
 db.deck.save({slide: 0,
@@ -39,18 +30,18 @@ db.deck.save({slide: 0,
               who: "Mike Dirolf, 10gen",
               handle: "@mdirolf"});
 db.deck.save({slide: 1,
-              question: "What is the shell?",
-              answer: "A better Powerpoint?"});
+              question: "what is the shell?",
+              answer: "a better Powerpoint?"});
 db.deck.save({slide: 2,
-              question: "What is the shell?",
-              answer: "A full JavaScript environment"});
+              question: "what is the shell?",
+              answer: "a full JavaScript environment"});
 db.deck.save({slide: 3,
-              question: "What is the shell?",
-              answer: "A reference MongoDB client"});
+              question: "what is the shell?",
+              answer: "a reference MongoDB client"});
 db.deck.save({slide: 4,
-              "use cases": ["Administrative scripting",
-                            "Exploring and debugging",
-                            "Learning"]});
+              "use cases": ["administrative scripting",
+                            "exploring and debugging",
+                            "learning"]});
 db.deck.save({slide: 5,
               "getting help": ["help",
                                "db.help",
@@ -63,10 +54,22 @@ db.deck.save({slide: 7,
               how: "'use' or 'db.getSisterDB'"});
 db.deck.save({slide: 8,
               navigating: "collections",
-              how: "dots or brackets"});
+              how: "dots or brackets",
+              note: "careful with names like foo-bar"});
+db.deck.save({slide: 9,
+              "fun with cursors": ["auto-iteration", "it"]});
+db.deck.save({slide: 10,
+              "pro-tip": "auto 'db.getLastError'"});
+db.deck.save({slide: 11,
+              "pro-tip": "commands and viewing JS source"});
+db.deck.save({slide: 12,
+              "getting help": "--help"});
+db.deck.save({slide: 12,
+              scripting: "run .js files",
+              tools: ["--eval", "--shell", "runProgram"]});
 db.deck.save({slide: 29,
-              actions: ["Convince 2 friends to try MongoDB",
-                        "Send feedback @mdirolf"]});
+              actions: ["convince 2 friends to try MongoDB",
+                        "send feedback @mdirolf"]});
 db.deck.save({slide: 30,
               url: "github.com/mdirolf/shell_presentation",
               questions: true});
