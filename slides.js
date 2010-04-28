@@ -18,7 +18,7 @@ db.dropDatabase();
 
 db.deck.save({slide: 0,
               title: "CRUD and the JavaScript Shell",
-              presenter: "Mike Dirolf, 10gen",
+              who: "Mike Dirolf, 10gen",
               handle: "@mdirolf"});
 db.deck.save({slide: 1,
               question: "What is the shell?",
@@ -34,7 +34,18 @@ db.deck.save({slide: 4,
                             "Exploring and debugging",
                             "Learning"]});
 db.deck.save({slide: 5,
+              "getting help": ["help",
+                               "db.help",
+                               "db.foo.help"]
               });
+db.deck.save({slide: 6,
+              "show": ["dbs", "collections", "users", "profiles"]});
+db.deck.save({slide: 7,
+              navigating: "databases",
+              how: "'use' or 'db.getSisterDB'"});
+db.deck.save({slide: 8,
+              navigating: "collections",
+              how: "dots or brackets"});
 db.deck.save({slide: 29,
               actions: ["Convince 2 friends to try MongoDB",
                         "Send feedback @mdirolf"]});
@@ -45,13 +56,20 @@ db.deck.save({slide: 30,
  // current slide
 var current = 0;
 
+// go to slide and print
+var go = function(n) {
+    current = n;
+    next();
+};
+
 // print current slide and advance
 var next = function() {
     var slide = db.deck.findOne({slide: current});
     if (slide) {
         current++;
         delete slide._id;
-        printjson(slide);
+        delete slide.slide;
+        print(tojson(slide, null, false));
     } else {
         print("The End!");
     }
