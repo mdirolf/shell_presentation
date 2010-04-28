@@ -10,6 +10,10 @@ db.dropDatabase();
  *  * Admin scripting
  *  * Exploring/debugging
  *  * Learning
+ * Help
+ * Navigation
+ * Quirks
+ * Scripting
  */
 
 db.deck.save({slide: 0,
@@ -29,6 +33,14 @@ db.deck.save({slide: 4,
               "use cases": ["Administrative scripting",
                             "Exploring and debugging",
                             "Learning"]});
+db.deck.save({slide: 5,
+              });
+db.deck.save({slide: 29,
+              actions: ["Convince 2 friends to try MongoDB",
+                        "Send feedback @mdirolf"]});
+db.deck.save({slide: 30,
+              url: "github.com/mdirolf/shell_presentation",
+              questions: true});
 
  // current slide
 var current = 0;
