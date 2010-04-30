@@ -43,32 +43,31 @@ db.deck.save({slide: 4,
                             "exploring and debugging",
                             "learning (and teaching!)"]});
 db.deck.save({slide: 5,
+              repl: ["arrows for history", "^L"]});
+db.deck.save({slide: 6,
               "getting help": ["help",
                                "db.help",
-                               "db.foo.help"]
-              });
-db.deck.save({slide: 6,
-              "show": ["dbs", "collections", "users", "profiles"]});
+                               "db.foo.help"]});
 db.deck.save({slide: 7,
+              "show": ["dbs", "collections", "users", "profiles"]});
+db.deck.save({slide: 8,
               navigating: "databases",
               how: "'use' or 'db.getSisterDB'"});
-db.deck.save({slide: 8,
-              navigating: "collections",
-              how: "dots or brackets",
-              note: "careful with names like foo-bar"});
 db.deck.save({slide: 9,
-              "fun with cursors": ["auto-iteration", "it"]});
+              navigating: "collections",
+              how: "dots, brackets, or 'db.getCollection'",
+              note: "careful with names like foo-bar"});
 db.deck.save({slide: 10,
-              "pro-tip": "auto 'db.getLastError'"});
+              "fun with cursors": ["auto-iteration", "it"]});
 db.deck.save({slide: 11,
-              "pro-tip": "commands and viewing JS source"});
+              "error checking": "auto 'db.getLastError'"});
 db.deck.save({slide: 12,
-              "getting help": "--help"});
+              "pro tip!": "commands and viewing JS source"});
 db.deck.save({slide: 13,
+              "getting help": "--help"});
+db.deck.save({slide: 14,
               scripting: "run .js files",
               tools: ["--eval", "--shell", "runProgram"]});
-db.deck.save({slide: 14,
-              repl: ["arrows for history", "^L"]});
 db.deck.save({slide: 15,
               warning: "dates in JS suck"});
 db.deck.save({slide: 16,
@@ -83,12 +82,6 @@ db.deck.save({slide: 18,
  // current slide
 var current = 0;
 
-// go to slide and print
-var go = function(n) {
-    current = n;
-    next();
-};
-
 // print current slide and advance
 var next = function() {
     var slide = db.deck.findOne({slide: current});
@@ -100,6 +93,12 @@ var next = function() {
     } else {
         print("The End!");
     }
+};
+
+// go to slide and print
+var go = function(n) {
+    current = n;
+    next();
 };
 
 // repeat the previous slide
