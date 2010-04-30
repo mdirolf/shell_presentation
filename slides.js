@@ -78,9 +78,11 @@ db.deck.save({slide: 17,
 db.deck.save({slide: 18,
               warning: "array iteration in JS sucks"});
 db.deck.save({slide: 19,
+              warning: "Numeric types in JS sucks"});
+db.deck.save({slide: 20,
               homework: ["convince 2 friends to try MongoDB",
                          "send feedback @mdirolf"]});
-db.deck.save({slide: 20,
+db.deck.save({slide: 21,
               url: "github.com/mdirolf/shell_presentation",
               questions: "?"});
 
