@@ -58,24 +58,29 @@ db.deck.save({slide: 9,
               how: "dots, brackets, or 'db.getCollection'",
               note: "careful with names like foo-bar"});
 db.deck.save({slide: 10,
-              "fun with cursors": ["auto-iteration", "it"]});
+              "basic operations": ["insert", "findOne", "find", "remove"]});
 db.deck.save({slide: 11,
-              "error checking": "auto 'db.getLastError'"});
+              "fun with cursors": ["auto-iteration", "it"]});
 db.deck.save({slide: 12,
-              "pro tip!": "commands and viewing JS source"});
+              "error checking": "auto 'db.getLastError'"});
 db.deck.save({slide: 13,
-              "getting help": "--help"});
+              "commands": ["count", "stats", "repair"],
+              "meta": "listCommands"});
 db.deck.save({slide: 14,
+              "pro tip!": "viewing JS source"});
+db.deck.save({slide: 15,
+              "getting help": "--help"});
+db.deck.save({slide: 16,
               scripting: "run .js files",
               tools: ["--eval", "--shell", "runProgram"]});
-db.deck.save({slide: 15,
-              warning: "dates in JS suck"});
-db.deck.save({slide: 16,
-              warning: "array iteration in JS sucks"});
 db.deck.save({slide: 17,
+              warning: "dates in JS suck"});
+db.deck.save({slide: 18,
+              warning: "array iteration in JS sucks"});
+db.deck.save({slide: 19,
               homework: ["convince 2 friends to try MongoDB",
                          "send feedback @mdirolf"]});
-db.deck.save({slide: 18,
+db.deck.save({slide: 20,
               url: "github.com/mdirolf/shell_presentation",
               questions: "?"});
 
