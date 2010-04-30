@@ -41,7 +41,7 @@ db.deck.save({slide: 3,
 db.deck.save({slide: 4,
               "use cases": ["administrative scripting",
                             "exploring and debugging",
-                            "learning"]});
+                            "learning (and teaching!)"]});
 db.deck.save({slide: 5,
               "getting help": ["help",
                                "db.help",
@@ -64,15 +64,21 @@ db.deck.save({slide: 11,
               "pro-tip": "commands and viewing JS source"});
 db.deck.save({slide: 12,
               "getting help": "--help"});
-db.deck.save({slide: 12,
+db.deck.save({slide: 13,
               scripting: "run .js files",
               tools: ["--eval", "--shell", "runProgram"]});
-db.deck.save({slide: 29,
-              actions: ["convince 2 friends to try MongoDB",
-                        "send feedback @mdirolf"]});
-db.deck.save({slide: 30,
+db.deck.save({slide: 14,
+              repl: ["arrows for history", "^L"]});
+db.deck.save({slide: 15,
+              warning: "dates in JS suck"});
+db.deck.save({slide: 16,
+              warning: "array iteration in JS sucks"});
+db.deck.save({slide: 17,
+              homework: ["convince 2 friends to try MongoDB",
+                         "send feedback @mdirolf"]});
+db.deck.save({slide: 18,
               url: "github.com/mdirolf/shell_presentation",
-              questions: true});
+              questions: "?"});
 
  // current slide
 var current = 0;
@@ -94,4 +100,10 @@ var next = function() {
     } else {
         print("The End!");
     }
+};
+
+// repeat the previous slide
+var again = function() {
+    current--;
+    next();
 };
