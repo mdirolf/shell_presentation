@@ -1,1 +1,1 @@
-Files for presentation "CRUD and the JavaScript Shell"
+Files for presentation "Mastering the MongoDB Shell"

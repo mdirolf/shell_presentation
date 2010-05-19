@@ -1,5 +1,5 @@
 /*
- * Slides for presentation on CRUD and the JavaScript shell.
+ * Slides for presentation on Mastering the MongoDB Shell.
  *
  * Copyright 2010 Mike Dirolf (http://dirolf.com)
  *
@@ -11,12 +11,13 @@
  * San Francisco, California, 94105, USA.
  *
  * Originally given at MongoSF on 4/30/2010.
+ * Modified and given at MongoNYC on 5/21/2010.
  *
  * To use: run `mongo --shell slides.js`
  */
 
 // set db and clean up
-db = db.getSisterDB("crud");
+db = db.getSisterDB("shell");
 db.dropDatabase();
 
 // some sample data
@@ -26,7 +27,7 @@ for (var i = 0; i < 1000; i += 1) {
 
 // "slides"
 db.deck.save({slide: 0,
-              title: "CRUD and the JavaScript Shell",
+              title: "Mastering the MongoDB Shell",
               who: "Mike Dirolf, 10gen",
               handle: "@mdirolf"});
 db.deck.save({slide: 1,
