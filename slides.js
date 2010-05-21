@@ -4,11 +4,11 @@
  * Copyright 2010 Mike Dirolf (http://dirolf.com)
  *
  * This work is licensed under the Creative Commons
- * Attribution-Noncommercial-Share Alike 3.0 United States License. To view a
- * copy of this license, visit
- * http://creativecommons.org/licenses/by-nc-sa/3.0/us/ or send a letter to
- * Creative Commons, 171 Second Street, Suite 300,
- * San Francisco, California, 94105, USA.
+ * Attribution-Noncommercial-Share Alike 3.0 United States License. To
+ * view a copy of this license, visit
+ * http://creativecommons.org/licenses/by-nc-sa/3.0/us/ or send a
+ * letter to Creative Commons, 171 Second Street, Suite 300, San
+ * Francisco, California, 94105, USA.
  *
  * Originally given at MongoSF on 4/30/2010.
  * Modified and given at MongoNYC on 5/21/2010.
@@ -27,63 +27,69 @@ for (var i = 0; i < 1000; i += 1) {
 
 // "slides"
 db.deck.save({slide: 0,
+              welcome: "to MongoNYC!",
+              hashtag: "#mongonyc",
+              mirror: "http://confmirror.10gen.com/"});
+db.deck.save({slide: 1,
               title: "Mastering the MongoDB Shell",
               who: "Mike Dirolf, 10gen",
               handle: "@mdirolf"});
-db.deck.save({slide: 1,
-              question: "what is the shell?",
-              answer: "a better Powerpoint?"});
 db.deck.save({slide: 2,
               question: "what is the shell?",
-              answer: "a full JavaScript environment"});
+              answer: "a better Powerpoint?"});
 db.deck.save({slide: 3,
               question: "what is the shell?",
-              answer: "a reference MongoDB client"});
+              answer: "a full JavaScript environment"});
 db.deck.save({slide: 4,
+              question: "what is the shell?",
+              answer: "a reference MongoDB client"});
+db.deck.save({slide: 5,
               "use cases": ["administrative scripting",
                             "exploring and debugging",
                             "learning (and teaching!)"]});
-db.deck.save({slide: 5,
-              repl: ["arrows for history", "^L"]});
 db.deck.save({slide: 6,
+              repl: ["arrows for history", "^L"]});
+db.deck.save({slide: 7,
               "getting help": ["help",
                                "db.help",
                                "db.foo.help"]});
-db.deck.save({slide: 7,
-              "show": ["dbs", "collections", "users", "profiles"]});
 db.deck.save({slide: 8,
+              "show": ["dbs", "collections", "users", "profile"]});
+db.deck.save({slide: 9,
               navigating: "databases",
               how: "'use' or 'db.getSisterDB'"});
-db.deck.save({slide: 9,
+db.deck.save({slide: 10,
               navigating: "collections",
               how: "dots, brackets, or 'db.getCollection'",
               note: "careful with names like foo-bar"});
-db.deck.save({slide: 10,
-              "basic operations": ["insert", "findOne", "find", "remove"]});
 db.deck.save({slide: 11,
-              "fun with cursors": ["auto-iteration", "it"]});
+              "basic operations": ["insert", "findOne", "find", "remove"]});
 db.deck.save({slide: 12,
-              "error checking": "auto 'db.getLastError'"});
+              "fun with cursors": ["auto-iteration", "it"]});
 db.deck.save({slide: 13,
-              "commands": ["count", "stats", "repair"],
-              "meta": "listCommands"});
+              "error checking": "auto 'db.getLastError'"});
 db.deck.save({slide: 14,
-              "pro tip!": "viewing JS source"});
+              "commands": ["count", "stats", "repairDatabase"],
+              "meta": "listCommands"});
 db.deck.save({slide: 15,
-              "getting help": "--help"});
+              "pro tip!": "viewing JS source"});
 db.deck.save({slide: 16,
+              "getting help": "--help"});
+db.deck.save({slide: 17,
               scripting: "run .js files",
               tools: ["--eval", "--shell", "runProgram"]});
-db.deck.save({slide: 17,
-              warning: "dates in JS suck"});
 db.deck.save({slide: 18,
-              warning: "array iteration in JS sucks"});
+              warning: "dates in JS suck"});
 db.deck.save({slide: 19,
-              warning: "Numeric types in JS sucks"});
+              warning: "array iteration in JS sucks"});
 db.deck.save({slide: 20,
+              warning: "numeric types in JS suck"});
+db.deck.save({slide: 21,
+              so: "why JS?"});
+db.deck.save({slide: 22,
               homework: ["convince 2 friends to try MongoDB",
                          "send feedback @mdirolf"]});
-db.deck.save({slide: 21,
+db.deck.save({slide: 23,
               url: "github.com/mdirolf/shell_presentation",
               questions: "?"});
 
